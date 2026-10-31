@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Luis Gustavo — Software Engineering · Development</title>
+  <desc id="desc">Cabeçalho CodeFable com onda azul suave no topo, transição contínua ao fundo escuro do GitHub e nome centralizado.</desc>
+  <defs>
+    <!-- Same palette and softness as the approved CodeFable footer. -->
+    <linearGradient id="soft-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1B45" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#12326C" stop-opacity="0.48"/>
+      <stop offset="38%" stop-color="#0C1F49" stop-opacity="0.42"/>
+      <stop offset="66%" stop-color="#0D1731" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wave-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C55BE" stop-opacity="0"/>
+      <stop offset="24%" stop-color="#234BA0" stop-opacity="0.24"/>
+      <stop offset="65%" stop-color="#0C2457" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wave-blue-secondary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D64B6" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#284A96" stop-opacity="0.19"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="blue-ambient" cx="50%" cy="37%" r="62%">
+      <stop offset="0%" stop-color="#0048F7" stop-opacity="0.12"/>
+      <stop offset="48%" stop-color="#10377B" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="horizontal-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.40"/>
+      <stop offset="14%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="86%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.40"/>
+    </linearGradient>
+    <mask id="edge-fade"><rect width="1200" height="320" fill="url(#horizontal-fade)"/></mask>
+    <!-- Fade fully to the README background before the image's lower edge. -->
+    <linearGradient id="vertical-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="9%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="33%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="57%" stop-color="#FFFFFF" stop-opacity="0.38"/>
+      <stop offset="76%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="vertical-feather"><rect width="1200" height="320" fill="url(#vertical-fade)"/></mask>
+    <linearGradient id="name-shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F4F4F0" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#DCE6FF" stop-opacity="0.58"/>
+      <stop offset="100%" stop-color="#F4F4F0" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="name-clip">
+      <text x="600" y="205" text-anchor="middle" font-family="Geist, Inter, Segoe UI, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-2">Luis Gustavo</text>
+    </clipPath>
+  </defs>
+  <style>
+    .ambient { animation: breathe 12s ease-in-out infinite alternate; }
+    .wave-one { animation: drift-one 15s ease-in-out infinite alternate; }
+    .wave-two { animation: drift-two 19s ease-in-out infinite alternate; }
+    .name-light { animation: sweep 11s ease-in-out infinite; }
+    @keyframes breathe { from { opacity: .65; } to { opacity: 1; } }
+    @keyframes drift-one { from { transform: translateY(-2px); } to { transform: translateY(3px); } }
+    @keyframes drift-two { from { transform: translateY(2px); } to { transform: translateY(-3px); } }
+    @keyframes sweep { 0%, 18% { opacity: 0; transform: translateX(-230px); } 28%, 59% { opacity: .7; } 78%, 100% { opacity: 0; transform: translateX(1430px); } }
+    @media (prefers-reduced-motion: reduce) { .ambient, .wave-one, .wave-two, .name-light { animation: none; } .name-light { opacity: 0; } }
+  </style>
+
+  <!-- Exact GitHub dark-surface match, with no framed edges. -->
+  <rect width="1200" height="320" fill="#0D1117"/>
+  <g mask="url(#vertical-feather)">
+    <g mask="url(#edge-fade)">
+      <rect class="ambient" width="1200" height="305" fill="url(#soft-blue)"/>
+      <ellipse class="ambient" cx="600" cy="84" rx="690" ry="125" fill="url(#blue-ambient)"/>
+      <g class="wave-one">
+        <path d="M0 26 C166 10 288 54 440 41 C596 28 730 9 885 26 C1015 41 1116 49 1200 34 L1200 185 L0 185 Z" fill="url(#wave-blue)"/>
+      </g>
+      <g class="wave-two">
+        <path d="M0 38 C161 19 316 64 476 54 C637 43 774 21 931 38 C1061 51 1124 58 1200 45 L1200 190 L0 190 Z" fill="url(#wave-blue-secondary)"/>
+      </g>
+    </g>
+  </g>
+
+  <text x="600" y="205" text-anchor="middle" font-family="Geist, Inter, Segoe UI, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-2" fill="#F4F4F0">Luis Gustavo</text>
+  <rect class="name-light" x="-230" y="143" width="180" height="80" clip-path="url(#name-clip)" fill="url(#name-shine)"/>
+  <text x="600" y="245" text-anchor="middle" font-family="Geist, Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="3.2" fill="#93B1FF">SOFTWARE ENGINEERING · DEVELOPMENT</text>
+</svg>

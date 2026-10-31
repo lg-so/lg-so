@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 162" width="550" height="162" role="img" aria-labelledby="t d">
+<title id="t">CodeFable</title>
+<desc id="d">Amostra visual do Site CodeFable.</desc>
+<rect width="550" height="162" rx="3" fill="#050608"/>
+<path d="M0 1H550" stroke="#0048F7" stroke-width="3"/>
+<text x="28" y="76" font-family="Geist, Inter, Segoe UI, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.5" fill="#F4F4F0">CodeFable</text>
+<text x="29" y="105" font-family="Geist, Segoe UI, Arial, sans-serif" font-size="11.5" letter-spacing="2.5" font-weight="600" fill="#A7ABBB">SITE INSTITUCIONAL</text>
+<rect x="29" y="124" width="21" height="17" rx="2" fill="#050608" stroke="#A7ABBB" stroke-opacity=".55"/>
+<rect x="57" y="124" width="21" height="17" rx="2" fill="#011458"/>
+<rect x="85" y="124" width="21" height="17" rx="2" fill="#0048F7"/>
+<rect x="113" y="124" width="21" height="17" rx="2" fill="#F4F4F0"/>
+</svg>

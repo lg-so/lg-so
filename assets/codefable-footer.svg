@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-labelledby="title desc">
+  <title id="title">CodeFable</title>
+  <desc id="desc">Rodapé CodeFable com ondulação em azul-marinho que se dissolve suavemente no fundo #0D1117 do README do GitHub, sem bordas ou faixas abruptas.</desc>
+  <defs>
+    <!-- Exactly the GitHub dark README background; the bottom has no color discontinuity. -->
+    <linearGradient id="github-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1117" />
+      <stop offset="100%" stop-color="#0D1117" />
+    </linearGradient>
+    <!-- Blue gently enters from the surrounding dark surface and fades back out. -->
+    <linearGradient id="soft-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1B45" stop-opacity="0" />
+      <stop offset="18%" stop-color="#12326C" stop-opacity="0.48" />
+      <stop offset="38%" stop-color="#0C1F49" stop-opacity="0.42" />
+      <stop offset="66%" stop-color="#0D1731" stop-opacity="0.13" />
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="wave-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C55BE" stop-opacity="0" />
+      <stop offset="24%" stop-color="#234BA0" stop-opacity="0.24" />
+      <stop offset="65%" stop-color="#0C2457" stop-opacity="0.11" />
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="wave-blue-secondary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D64B6" stop-opacity="0" />
+      <stop offset="40%" stop-color="#284A96" stop-opacity="0.19" />
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="blue-ambient" cx="50%" cy="37%" r="62%">
+      <stop offset="0%" stop-color="#0048F7" stop-opacity="0.12" />
+      <stop offset="48%" stop-color="#10377B" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0" />
+    </radialGradient>
+    <!-- No hard left/right edge; the light returns smoothly to the GitHub surface. -->
+    <linearGradient id="horizontal-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.40" />
+      <stop offset="14%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="86%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.40" />
+    </linearGradient>
+    <mask id="edge-fade"><rect width="1200" height="240" fill="url(#horizontal-fade)" /></mask>
+    <!-- Guaranteed seamless top/bottom boundaries against #0D1117. -->
+    <linearGradient id="vertical-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="12%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="59%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="87%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <mask id="vertical-feather"><rect width="1200" height="240" fill="url(#vertical-fade)" /></mask>
+  </defs>
+  <style>
+    .ambient { animation: breathe 12s ease-in-out infinite alternate; }
+    .wave-one { animation: drift-one 15s ease-in-out infinite alternate; }
+    .wave-two { animation: drift-two 19s ease-in-out infinite alternate; }
+    @keyframes breathe { from { opacity: .65; } to { opacity: 1; } }
+    @keyframes drift-one { from { transform: translateY(-2px); } to { transform: translateY(3px); } }
+    @keyframes drift-two { from { transform: translateY(2px); } to { transform: translateY(-3px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .ambient, .wave-one, .wave-two { animation: none; }
+    }
+  </style>
+
+  <rect width="1200" height="240" fill="url(#github-surface)" />
+  <g mask="url(#vertical-feather)">
+    <g mask="url(#edge-fade)">
+    <rect class="ambient" width="1200" height="235" fill="url(#soft-blue)" />
+    <ellipse class="ambient" cx="600" cy="82" rx="690" ry="125" fill="url(#blue-ambient)" />
+    <g class="wave-one">
+      <path d="M0 26 C 166 10 288 54 440 41 C 596 28 730 9 885 26 C 1015 41 1116 49 1200 34 L1200 185 L0 185 Z" fill="url(#wave-blue)" />
+    </g>
+    <g class="wave-two">
+      <path d="M0 38 C 161 19 316 64 476 54 C 637 43 774 21 931 38 C 1061 51 1124 58 1200 45 L1200 190 L0 190 Z" fill="url(#wave-blue-secondary)" />
+    </g>
+    </g>
+  </g>
+
+  <!-- Original CodeFable symbol and wordmark, without a secondary tagline. -->
+  <g transform="translate(449 121)">
+    <g transform="scale(0.11)">
+      <path d="M428 1H142C65.7848 1 4 62.7848 4 139V290C4 366.215 65.7848 428 142 428H169V352H142C107.758 352 80 324.242 80 290V139C80 104.758 107.758 77 142 77H428V1Z" fill="#0048F7" />
+      <path d="M193 170H428V246H271V428H193V170Z" fill="#0048F7" />
+    </g>
+    <text x="117" y="38" font-family="Geist, Inter, Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="-.8" fill="#F4F4F0">CodeFable</text>
+  </g>
+</svg>
